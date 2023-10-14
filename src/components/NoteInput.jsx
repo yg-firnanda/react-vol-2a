@@ -30,9 +30,20 @@ const NoteInput = () => {
     return (
         <div>
             <form onSubmit={onSubmitEventHandler}>
-                <input type="text" value={state.title} onChange={onTitleChangeEventHandler} />
-                <textarea value={state.body} onChange={onBodyChangeEventHandler}></textarea>
-                <button type="submit">Add</button>
+                <input
+                    type="text"
+                    value={state.title}
+                    onChange={onTitleChangeEventHandler}
+                />
+                <textarea
+                    value={state.body}
+                    onChange={onBodyChangeEventHandler}>
+                </textarea>
+                <button
+                    type="submit"
+                >
+                    Add
+                </button>
             </form>
         </div>
     )

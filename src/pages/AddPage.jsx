@@ -1,5 +1,5 @@
-import React from "react";
-import NoteInput from "../components/NoteInput";
+import React from 'react';
+import NoteInput from '../components/NoteInput';
 
 function AddPage() {
     return <NoteInput />

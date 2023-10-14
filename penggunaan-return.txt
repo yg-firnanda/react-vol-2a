@@ -1,0 +1,51 @@
+>>> return ()
+- Boleh digunakan ketika Anda ingin mengembalikan satu elemen JSX atau hasil dari satu ekspresi.
+- Berguna untuk mengelompokkan elemen JSX bersama tanpa memerlukan elemen pembungkus tambahan.
+- Digunakan ketika hanya ada satu operasi atau ekspresi yang ingin Anda kembalikan.
+Contoh:
+
+return (
+    <div>
+        <h1>Hello, World!</h1>
+    </div>
+);
+
+const notes = this.state.notes.filter(note => (
+    note.title.toLowerCase().includes(
+        this.state.keyword.toLowerCase()
+    )
+))
+
+>>> return {}
+- Digunakan ketika Anda ingin mengembalikan lebih dari satu ekspresi atau jika Anda ingin melakukan lebih dari satu operasi sebelum mengembalikan hasil.
+- Berguna ketika Anda perlu melakukan logika tambahan sebelum menghasilkan elemen JSX atau nilai yang ingin Anda kembalikan.
+Contoh:
+
+return (
+    <div>
+        {someCondition ? <TrueComponent /> : <FalseComponent />}
+        {additionalLogic()}
+    </div>
+);
+
+return (
+    <div>
+        {condition ? (
+            someValue
+        ) : (
+            anotherValue
+        )}
+    </div>
+); 
+
+const notes = this.state.notes.filter(note => {
+    return note.title.toLowerCase().includes(
+        this.state.keyword.toLowerCase()
+    )
+})
+
+Catatan Tambahan:
+Pada dasarnya, return () digunakan untuk mengembalikan satu elemen atau ekspresi JSX tunggal.
+return {} digunakan ketika Anda memiliki lebih dari satu operasi atau ingin melakukan logika tambahan sebelum mengembalikan nilai dari fungsi atau komponen.
+Kedua bentuk ini dapat digunakan secara benar, tetapi tergantung pada kompleksitas dari logika yang ingin Anda masukkan sebelum mengembalikan elemen JSX atau nilai.
+Jadi, memilih antara return () dan return {} tergantung pada kebutuhan spesifik Anda dalam suatu situasi.
